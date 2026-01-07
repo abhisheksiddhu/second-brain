@@ -1,0 +1,6 @@
+- About page
+- Featured articles per category
+- Contact us
+- Archives by month
+- Add podcast articles
+- Add kasol travel article

@@ -1,0 +1,23 @@
+- 3 major things - Research/Talent/Capital
+- Manhattan project brought talent from Europe to US
+- espin nanonetch - carbon nanofibers which go in air filters
+- [NMICPS](https://nmicps.in/)
+- [National Quantum Mission (NQM) | Department Of Science & Technology](https://dst.gov.in/national-quantum-mission-nqm)
+- [Budget 2020 announces Rs 8000 cr National Mission on Quantum Technologies & Applications | Department Of Science & Technology](https://dst.gov.in/budget-2020-announces-rs-8000-cr-national-mission-quantum-technologies-applications)
+- bring learnings from Nordic ecosystem to Indian ecosystem
+- creation of knowledge is not the weakness, utilization is
+- [25 Technology Innovation Hubs across the country through NM-ICPS are boosting new and emerging technologies to power national initiatives | Department Of Science & Technology](https://dst.gov.in/25-technology-innovation-hubs-across-country-through-nm-icps-are-boosting-new-and-emerging)
+- triple helix DNA
+- hardware autonomy
+- [National Super Computing Mission | Department Of Science & Technology](https://dst.gov.in/national-super-computing-mission)
+- alphafold experiment
+- democratize technology
+- s360 architecture by IBM - virtual memory
+- augmentation of CPU with accelerated computing
+- [National Research Foundation](https://pib.gov.in/PressReleaseIframePage.aspx?PRID=1935895)
+- top 3 economies by 2047
+- 50 thousand crore deficit
+- deregulate survey and mapping, currently it takes 6-8 months for even govt agencies
+- 3 layers : foot soldiers - survey and mapping, LiDAR & drones, space
+- 50% of rural people don't have ownership certificate which stop govt from using it as most of the feuds are cause of it
+- 30T economy by 2047

@@ -1,0 +1,14 @@
+- [Farmer.CHAT | An AI Assistant for Farmers by DigitalGreen.org & Gooey.AI](https://www.help.gooey.ai/farmerchat)
+- Multi-lingual WhatsApp conversational bot
+- [Dispute Resolution | Alternative Dispute Resolution in India (webnyay.ai)](https://www.webnyay.ai/)
+- Document storage
+- 50 pages OCR in 120 seconds
+- bookmarked index
+- reduce research time by paralegal and junior lawyers by 90%
+- [Adya | ONDC in a box](https://adya.ai/)
+- ONDC is a protocol not a platform
+- full seller onboarding via WhatsApp conversational bot
+- [Artivatic | AI Insurance Platform](https://artivatic.ai/)
+- AI operating system for Insurtech & Health Tech transformation
+- 
+![[attachments/IMG20231103153042.jpg]]

@@ -1,0 +1,13 @@
+- Ask for PPT, too many slides
+- Lack of access to cooling tech across different regions
+- Most inefficient Agri system
+- Less than 10% recycled even after decades, focus on input materials
+- Carbon management, decarbonization at enterprise scale
+- in 30 years, most will retire as AI will take over - father of deep learning
+- Training one model takes one week and has same carbon impact as lifetime of a car
+- Compute not that efficient, probably look for quantum
+- Scalability and end user adoption are bigger concerns and focus area for investors
+- AI is still in playground stage, lack of reliable data for long term impact
+- Increasing cost of human capital
+- [Karya | We solve data needs](https://www.karya.in/)
+

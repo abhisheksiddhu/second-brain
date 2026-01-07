@@ -1,0 +1,246 @@
+{
+  "main": {
+    "id": "bfb331bd6dee06dc",
+    "type": "split",
+    "children": [
+      {
+        "id": "cb0181f9c0187697",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7720327af1fc6afd",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "66b0af1ad0f4fe64",
+    "type": "split",
+    "children": [
+      {
+        "id": "7fd0b6e7b43faf24",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f12999ef98eaff3a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "efcab8174111fa63",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8a632074fcd82489",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9bb140d9e2664f7f",
+    "type": "split",
+    "children": [
+      {
+        "id": "4d0c267db9ce44eb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39749fc7e8ea6b17",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104104139.jpg",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for IMG20231104104139"
+            }
+          },
+          {
+            "id": "6727d7976038cd48",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Architectural Updates and Direction.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Architectural Updates and Direction"
+            }
+          },
+          {
+            "id": "29dc6a589b4f6526",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "f16703d4e355b2a0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Product Ideas/Ideas.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Ideas"
+            }
+          },
+          {
+            "id": "e772cc537df9bc37",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "Medium Articles/The Tools I Use Every Day That Would Get Me Fired If I Had a Job.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
+          },
+          {
+            "id": "714f982ebd7f2d2e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "audio-recorder:Start/stop recording": false,
+      "workspaces:Manage workspace layouts": false
+    }
+  },
+  "active": "f12999ef98eaff3a",
+  "lastOpenFiles": [
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104161810.jpg",
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104101145.jpg",
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104111339.jpg",
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104133750.jpg",
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104113120.jpg",
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104142309.jpg",
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104093745.jpg",
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104154115.jpg",
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104180228.jpg",
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104120323.jpg",
+    "Events/2023 - SlushD/Day 1 - Founders Corner/attachments/IMG20231103161200.jpg",
+    "Events/2023 - SlushD/Day 1 - Founders Corner/Content & Creator Economy.md",
+    "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments",
+    "Events/2023 - SlushD/Day 1 - Founders Corner/Gen AI for Bharat.md",
+    "Events/2023 - SlushD/Day 1 - Founders Corner/attachments",
+    "Product Ideas/Ideas.md",
+    "Product Ideas/attachments",
+    "Product Ideas/ShopMash.md",
+    "Content Creation/Dakaiti/Episode-02 - Laptops for Devs Inspired by Apple M1 Event.md",
+    "Zero-Friction Health Optimization Plan.md",
+    "Product Ideas/Compliance.md",
+    "Product Ideas/Adman.md",
+    "Medium Articles/The Tools I Use Every Day That Would Get Me Fired If I Had a Job.md",
+    "BMC Security Audit.md",
+    "Product Ideas/Trend Bioscope.md",
+    "Product Ideas/TechSavera.md",
+    "Product Ideas/Me Card.md",
+    "Books to read.md",
+    "The Concurrent Mind.md",
+    "Time Table.md",
+    "Isekai RPG.md",
+    "Untitled.canvas",
+    "Untitled.md",
+    "Untitled.base",
+    "2026-01-07.md",
+    "Arinsys/Human Resources/Career Track.md",
+    "Arinsys/Engineering/Process.md",
+    "Arinsys/Engineering/Contribution Guidelines.md",
+    "Arinsys/Engineering/Catalyst.md",
+    "Altysys/OpComm Weekly Status.md",
+    "Altysys/CoachConnect Mobile App.md",
+    "InvictIQ",
+    "Untitled/Untitled",
+    "Altysys/Sound Transit",
+    "Prompts",
+    "Altysys/Swank",
+    "Arinsys/Human Resources"
+  ]
+}

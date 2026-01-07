@@ -1,0 +1,27 @@
+## State of LLM
+
+- cost for localization - Open API is 5x costly for Hindi, 10x for Kannada, 20x for north-east language
+- find the need first
+- most examples are POCs, building POCs is easy, production apps are hard
+- multi-language model as the next step
+- [Bhashini](https://bhashini.gov.in/)
+- [AI4Bharat](https://ai4bharat.iitm.ac.in/)
+- data structure is not consistent, especially for old companies who aren't tech first
+- cultures and traditions are experiments that worked
+- socio-economic morphing
+- only 50 million people have purchased something on Flipkart, which is not 10% of audience even though the smartphone penetration is much higher
+- cheaper phone cause price sensitivity is more in lower segments
+- using voice in WhatsApp has simplified the adoption even for people who can't read or write
+- infra as a challenge - lack of GPU
+- MakeMyTrip did replace some agents, but many are still coexisting
+- age of software was not brutal - PCs didn't kill IBM, but age of AI will be
+- ChatGPT has data of questions of what people ask for
+- are we competing in markets where it's not needed - do you need ChatGPT to tell where is your Zomato order, just elastic search can do the work
+- focus on objective specific models which can run at a much cheaper cost
+- 95% of population doesn't use or need productivity apps
+- focus on bottom-up innovation instead of top-down
+- 80-20 rule, revenue can come from 20% and data from remaining 80%
+- for deepfake, it's more about the believability and source
+- psychological morphing of belief systems
+- [Blue Zones Netflix Documentary - Blue Zones](https://www.bluezones.com/documentary/)
+- 5 dimensions

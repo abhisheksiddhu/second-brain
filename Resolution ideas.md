@@ -1,0 +1,9 @@
+- No spend days in week
+- Self dates
+- Silent time
+- Expense tracking
+- Listen/read 5 books
+- Set up LinkedIn profile
+- Ask for the deserved raise
+- Stabilize second source of income
+- Digital wellbeing rules

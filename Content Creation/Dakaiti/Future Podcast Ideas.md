@@ -1,0 +1,5 @@
+- Product, Service & Start-up companies
+- .Net Conf
+- AI/ML .NET Developers
+- 10X Developers
+- Office Politics

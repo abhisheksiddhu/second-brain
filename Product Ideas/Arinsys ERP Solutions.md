@@ -1,0 +1,30 @@
+Hierarchy of Library
+
+- Shared
+    - Authentication/Authorization
+        - User Authentication
+        - Session
+        - Role Claim (Permanent Authority based on Role)
+        - User Claim (Special Authority for a specific user)
+        - Action Table
+    - Common
+- ERP
+    - Accounts
+    - HR
+    - Marketing
+    - Sales
+    - Purchase
+    - CRM
+    - Analytics
+- Hospitality
+    - Delivery Points
+    - Restaurant
+    - Hotel
+    - Shared
+        - Item Master
+        - Analytics
+- Education
+    - Tuition Centre
+    - Home Tuition
+    - Institute
+    - University/Trust

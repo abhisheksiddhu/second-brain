@@ -1,0 +1,12 @@
+- operation excellence has to be at root
+- data logging started for debugging, then analytics, then predictive analytics, now into AI
+- personalization
+- find the point where IT stops and AI begins
+- who, where, when data
+- most of the data is unstructured, example - many people will write go to this pan wala and ask him the address and some will properly structure it like sectors areas
+- treat data and domain knowledge with a lot more respect as quality of data is essential for AI
+- AI transformation is more about cultural transformation
+- digitization is at the bottom for collecting grassroot data for disruption in industries like agriculture
+- data citizenship
+- data is not IP
+- big corporations can't work in isolation

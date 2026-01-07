@@ -1,0 +1,28 @@
+Speakers
+- Shri S Krishnan - Secretary, MEITY
+- Shri Rajesh Kumar Singh - Secretary, DPIIT
+- Pramod Bhasin - Chairman Clix Capital, Founder and Former CEO Genpact
+
+- 3rd largest startup nation in 7 years
+- [India Stack](https://indiastack.org/index.html) & [Digital Public Infrastructure](https://newsonair.gov.in/News?id=471007)
+- data tourism
+- [PM Gati Shakti - National Master Plan for Multi-modal Connectivity| National Portal of India](https://www.india.gov.in/spotlight/pm-gati-shakti-national-master-plan-multi-modal-connectivity)
+- [International Bridges](https://www.startupindia.gov.in/content/sih/en/international.html)
+- legal framework to support
+- [Digital Personal Data Protection Act 2023](https://www.meity.gov.in/content/digital-personal-data-protection-act-2023)
+- Anonymized data accessibility
+- 3-way partnership between Industry/Academia/Government/Public Sector
+- largest AI facility in India is 75th in the world, moved up from 150th -
+- [India's AI supercomputer 'AIRAWAT' ranks high in supercomputing](https://indiaai.gov.in/news/india-s-ai-supercomputer-airawat-ranks-high-in-supercomputing)
+- Patent approval speed has improved but still very slow
+- Focus on clean energy, agricultural industry efficiency
+- startup in 650 of 750 districts
+- tier 2/tier 3 involvement has increased
+- [STPI | Ministry of Electronics and Information Technology](https://www.meity.gov.in/content/stpi)
+- skill gap is not that much in engineering manpower, it's much more in labor
+- Companies like FOXCONN are coming to India due to labor arbitrage
+- AI will bring back humanity into the jobs and brush off
+- procurement platforms like for defense IDAXFere(not sure about the name)
+- twingrid labs
+- [Atal Tinkering Labs | ATL | AIM](https://www.aim.gov.in/atl.php)
+- national mentorship portal

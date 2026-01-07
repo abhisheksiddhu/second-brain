@@ -1,0 +1,11 @@
+- role of SEBI and SIDBI
+- family offices, HNIs
+- 3 industry verticals engagers, enablers, enhancers
+- copyleft instead of copyright
+- 70 million small MSME in informal sector finance
+- payment layer is there for informal sector, credit layer is missing
+- digital public-private infrastructure
+- PPP - public private partnership effort
+- C+1 -> China plus one - supply chain/software
+- PLI scheme
+- India has benefits due to distrust in China

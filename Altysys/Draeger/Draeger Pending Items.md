@@ -1,0 +1,1 @@
+1. Acrylic Sheet for insulation. Holes are there in case where hooks will be present 

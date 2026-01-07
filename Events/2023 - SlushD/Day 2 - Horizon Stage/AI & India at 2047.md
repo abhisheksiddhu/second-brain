@@ -1,0 +1,2 @@
+- copy concepts from financial systems as it has similar attributes and protections of a complex adaptive systems
+- focus on civilizational confidence
