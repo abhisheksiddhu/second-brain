@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "cb0181f9c0187697",
+        "id": "5484daf7a2205a50",
         "type": "tabs",
         "children": [
           {
-            "id": "7720327af1fc6afd",
+            "id": "4e0e427462173c1e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Ideas/Ideas.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Ideas"
             }
           }
         ]
@@ -90,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104104139.jpg",
+                "file": "Ideas/Ideas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for IMG20231104104139"
+              "title": "Backlinks for Ideas"
             }
           },
           {
@@ -195,6 +209,9 @@
   },
   "active": "f12999ef98eaff3a",
   "lastOpenFiles": [
+    "Events/2023 - SlushD/Day 1 - Founders Corner/Content & Creator Economy.md",
+    "Time Table.md",
+    "Zero-Friction Health Optimization Plan.md",
     "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104161810.jpg",
     "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104101145.jpg",
     "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104111339.jpg",
@@ -205,26 +222,22 @@
     "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104154115.jpg",
     "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104180228.jpg",
     "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments/IMG20231104120323.jpg",
-    "Events/2023 - SlushD/Day 1 - Founders Corner/attachments/IMG20231103161200.jpg",
-    "Events/2023 - SlushD/Day 1 - Founders Corner/Content & Creator Economy.md",
     "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments",
     "Events/2023 - SlushD/Day 1 - Founders Corner/Gen AI for Bharat.md",
     "Events/2023 - SlushD/Day 1 - Founders Corner/attachments",
-    "Product Ideas/Ideas.md",
+    "Ideas/Ideas.md",
     "Product Ideas/attachments",
-    "Product Ideas/ShopMash.md",
+    "Ideas/ShopMash.md",
     "Content Creation/Dakaiti/Episode-02 - Laptops for Devs Inspired by Apple M1 Event.md",
-    "Zero-Friction Health Optimization Plan.md",
-    "Product Ideas/Compliance.md",
-    "Product Ideas/Adman.md",
+    "Ideas/Compliance.md",
+    "Ideas/Adman.md",
     "Medium Articles/The Tools I Use Every Day That Would Get Me Fired If I Had a Job.md",
     "BMC Security Audit.md",
-    "Product Ideas/Trend Bioscope.md",
-    "Product Ideas/TechSavera.md",
-    "Product Ideas/Me Card.md",
+    "Ideas/Trend Bioscope.md",
+    "Ideas/TechSavera.md",
+    "Ideas/Me Card.md",
     "Books to read.md",
     "The Concurrent Mind.md",
-    "Time Table.md",
     "Isekai RPG.md",
     "Untitled.canvas",
     "Untitled.md",
