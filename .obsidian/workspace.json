@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ideas/Ideas.md",
+                "file": "Altysys/Wage Indicator/Labour Information Management System/LMIS_Tech_Stack_Recommendation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,19 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Ideas"
+              "title": "LMIS_Tech_Stack_Recommendation"
+            }
+          },
+          {
+            "id": "e92ddf284592dab6",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.7"
             }
           }
         ]
@@ -104,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ideas/Ideas.md",
+                "file": "Altysys/Wage Indicator/Labour Information Management System/LMIS_Tech_Stack_Recommendation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +126,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Ideas"
+              "title": "Backlinks for LMIS_Tech_Stack_Recommendation"
             }
           },
           {
@@ -152,13 +164,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Product Ideas/Ideas.md",
+                "file": "Altysys/Wage Indicator/Labour Information Management System/LMIS_Tech_Stack_Recommendation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Ideas"
+              "title": "Outline of LMIS_Tech_Stack_Recommendation"
             }
           },
           {
@@ -187,11 +199,13 @@
               "title": "All properties"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -207,8 +221,14 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "f12999ef98eaff3a",
+  "active": "4e0e427462173c1e",
   "lastOpenFiles": [
+    "Altysys/Wage Indicator/Labour Information Management System/LMIS_Modules_List.md",
+    "Altysys/Wage Indicator/Labour Information Management System/LMIS_Tech_Stack_Recommendation.md",
+    "Altysys/Wage Indicator/Labour Information Management System/Summary.md",
+    "Altysys/Wage Indicator/Labour Information Management System/Sales Deck.md",
+    "Altysys/Wage Indicator/Labour Information Management System/Questionnaire.md",
+    "Ideas/Ideas.md",
     "Events/2023 - SlushD/Day 1 - Founders Corner/Content & Creator Economy.md",
     "Time Table.md",
     "Zero-Friction Health Optimization Plan.md",
@@ -225,7 +245,6 @@
     "Events/2023 - SlushD/Day 2 - Horizon Stage/attachments",
     "Events/2023 - SlushD/Day 1 - Founders Corner/Gen AI for Bharat.md",
     "Events/2023 - SlushD/Day 1 - Founders Corner/attachments",
-    "Ideas/Ideas.md",
     "Product Ideas/attachments",
     "Ideas/ShopMash.md",
     "Content Creation/Dakaiti/Episode-02 - Laptops for Devs Inspired by Apple M1 Event.md",
@@ -245,10 +264,6 @@
     "2026-01-07.md",
     "Arinsys/Human Resources/Career Track.md",
     "Arinsys/Engineering/Process.md",
-    "Arinsys/Engineering/Contribution Guidelines.md",
-    "Arinsys/Engineering/Catalyst.md",
-    "Altysys/OpComm Weekly Status.md",
-    "Altysys/CoachConnect Mobile App.md",
     "InvictIQ",
     "Untitled/Untitled",
     "Altysys/Sound Transit",
