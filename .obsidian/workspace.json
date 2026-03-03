@@ -13,34 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Altysys/Wage Indicator/Labour Information Management System/LMIS_Tech_Stack_Recommendation.md",
+                "file": "Altysys/Wage Indicator/Data Transformation/Meeting 26 Feb 2026.md",
                 "mode": "source",
                 "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "LMIS_Tech_Stack_Recommendation"
+              "title": "Meeting 26 Feb 2026"
             }
           },
           {
-            "id": "e92ddf284592dab6",
+            "id": "31d1331451ec788e",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.11.7"
+                "file": "Altysys/Nomiso/IntelliQ.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.7"
+              "icon": "lucide-file",
+              "title": "IntelliQ"
             }
           }
         ]
@@ -223,11 +217,25 @@
   },
   "active": "4e0e427462173c1e",
   "lastOpenFiles": [
-    "Altysys/Wage Indicator/Labour Information Management System/LMIS_Modules_List.md",
-    "Altysys/Wage Indicator/Labour Information Management System/LMIS_Tech_Stack_Recommendation.md",
-    "Altysys/Wage Indicator/Labour Information Management System/Summary.md",
     "Altysys/Wage Indicator/Labour Information Management System/Sales Deck.md",
     "Altysys/Wage Indicator/Labour Information Management System/Questionnaire.md",
+    "Altysys/Wage Indicator/Labour Information Management System/LMIS_Tech_Stack_Recommendation.md",
+    "Altysys/Wage Indicator/Labour Information Management System/LMIS_Modules_List.md",
+    "Altysys/Wage Indicator/Data Transformation/Meeting 26 Feb 2026.md",
+    "Altysys/Nomiso/IntelliQ - RFI Response.md",
+    "Altysys/Wage Indicator/Data Transformation",
+    "Altysys/Nomiso/IntelliQ - Phased Timeline.md",
+    "Altysys/Nomiso/IntelliQ.md",
+    "Altysys/Sound Transit/Architecture Components.md",
+    "Altysys/Nomiso/Development Partnership for Intelli-Q – AI-Powered SDLC Platform RFI.pdf",
+    "Altysys/Nomiso/IntelliQ - RFI Response.pdf",
+    "Altysys/Market Analysis/Competitive Landscape Analysis.md",
+    "Altysys/Market Analysis/Palantir Technologies.md",
+    "Altysys/Market Analysis/Scale AI.md",
+    "Altysys/Market Analysis/Articul8.md",
+    "Altysys/Market Analysis/Turing.md",
+    "Altysys/Market Analysis",
+    "Altysys/Wage Indicator/Labour Information Management System/Summary.md",
     "Ideas/Ideas.md",
     "Events/2023 - SlushD/Day 1 - Founders Corner/Content & Creator Economy.md",
     "Time Table.md",
@@ -252,23 +260,9 @@
     "Ideas/Adman.md",
     "Medium Articles/The Tools I Use Every Day That Would Get Me Fired If I Had a Job.md",
     "BMC Security Audit.md",
-    "Ideas/Trend Bioscope.md",
-    "Ideas/TechSavera.md",
-    "Ideas/Me Card.md",
-    "Books to read.md",
-    "The Concurrent Mind.md",
-    "Isekai RPG.md",
     "Untitled.canvas",
-    "Untitled.md",
     "Untitled.base",
-    "2026-01-07.md",
-    "Arinsys/Human Resources/Career Track.md",
-    "Arinsys/Engineering/Process.md",
     "InvictIQ",
-    "Untitled/Untitled",
-    "Altysys/Sound Transit",
-    "Prompts",
-    "Altysys/Swank",
-    "Arinsys/Human Resources"
+    "Untitled/Untitled"
   ]
 }
