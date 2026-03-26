@@ -124,8 +124,8 @@ Keep iterating until explicit approval.
 
 Once the plan is approved:
 
-1. Save the spec and plan (without any frontmatter) as `{FeatureName}.md` using `edit/createFile`
-2. Tell the user: **"Spec saved to `{FeatureName}.md`. Open it in a fresh chat with your implementation agent for a clean context."**
+1. Save the spec and plan (without any frontmatter) as `docs/specs/{FeatureName}.md` using `edit/createFile`
+2. Tell the user: **"Spec saved to `docs/specs/{FeatureName}.md`. Open it in a fresh chat with your implementation agent for a clean context."**
 
 Do NOT hand off. Do NOT attempt implementation.
 </workflow>
