@@ -9,7 +9,7 @@ tools:
     "web",
     "search",
     "read",
-    "edit/createFile",
+    "edit",
     "microsoftdocs/mcp/*",
     "vscode/askQuestions",
   ]
@@ -97,10 +97,10 @@ When the user confirms:
 
 2. **Save the ADR file**: Write to `docs/architecture/{YYYY-MM-NNN}-{PascalCaseTitle}.md` using `edit/createFile`.
 
-3. **Update the index**: Append a row to the **Active** table in `docs/architecture/README.md` with the ADR's number, date, title, and status (`Active`).
+3. **Update the index**: Append a row to the **Active** table in `docs/architecture/README.md`. Format: `| YYYY-MM-DD | [Title](filename.md) |`.
 
 4. **Handle supersession** (if the new ADR supersedes an existing one):
-   - Move the superseded ADR's row from the Active table to the Superseded table, setting its status to `Superseded by → ADR-{new ADR number}`.
+   - Move the superseded ADR's row from the Active table to the Superseded table, adding the superseding ADR as a link in the "Superseded By" column. Format: `| YYYY-MM-DD | [Title](filename.md) | [YYYY-MM-NNN](superseding-filename.md) |`.
    - If this creates a chain of 3+ superseded entries for the same topic in the Superseded table, keep only the 2 most recent superseded entries and remove older rows. The pruned ADR files remain in `docs/architecture/`; only the index rows are removed.
 
 5. **State the ADR path** in your message (e.g., "ADR saved to `docs/architecture/2026-03-001-HandlerPattern.md`") so the Analyst receives the path via handoff context.
