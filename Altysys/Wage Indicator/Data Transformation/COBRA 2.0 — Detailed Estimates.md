@@ -8,13 +8,13 @@
 | M0: Discovery & Project Setup | Infrastructure | 0.4 | Docker Compose setup, CI/CD pipelines, staging env on EU cloud | 2 | 0 | 2 |
 | M0: Discovery & Project Setup | Dev Environment | 0.5 | docker-compose.yml, seed data scripts, .env templates, onboarding README | 1 | 0 | 1 |
 | M0: Discovery & Project Setup | Security | 0.6 | STRIDE threat modeling — first-pass threat register, map mitigations to backlog | 1 | 0 | 1 |
-| M0: Discovery & Project Setup | LLM Evaluation | 0.7 | Test 3-5 sample documents against candidate models, accuracy comparison | 3 | 0 | 3 |
+| M0: Discovery & Project Setup | LLM Evaluation | 0.7 | Test 50 sample documents against candidate models, accuracy comparison | 3 | 0 | 3 |
 | M0: Discovery & Project Setup | Sign-off | 0.8 | Tech stack confirmation, ADR documentation, team kickoff | 1 | 0 | 1 |
 | M1: COBRA Core Platform | Unified DB Schema | 1.1.1 | PostgreSQL schema DDL — create all core tables, constraints, foreign keys | 3 | 0 | 3 |
-| M1: COBRA Core Platform | Unified DB Schema | 1.1.2 | Django model definitions and migration files for core schema | 2 | 0 | 2 |
+| M1: COBRA Core Platform | Unified DB Schema | 1.1.2 | SQLAlchemy model definitions and migration files for core schema | 2 | 0 | 2 |
 | M1: COBRA Core Platform | Unified DB Schema | 1.1.3 | Seed data — 180+ countries (ISO 3166), 75+ languages (ISO 639), currencies, regions | 2 | 0 | 2 |
 | M1: COBRA Core Platform | Unified DB Schema | 1.1.4 | Database indexing strategy — composite indexes, partial indexes for common query patterns | 2 | 0 | 2 |
-| M1: COBRA Core Platform | Unified DB Schema | 1.1.5 | Connection pooling (pgBouncer) and query performance baseline | 1 | 0 | 1 |
+| M1: COBRA Core Platform | Unified DB Schema | 1.1.5 | Connection pooling and query performance baseline | 1 | 0 | 1 |
 | M1: COBRA Core Platform | Core Data Models | 1.2.1 | Country model — ISO codes, region, sub-region, currency, metadata, active flag | 2 | 0 | 2 |
 | M1: COBRA Core Platform | Core Data Models | 1.2.2 | Language model — locale code, script direction (LTR/RTL), fallback language chain | 2 | 0 | 2 |
 | M1: COBRA Core Platform | Core Data Models | 1.2.3 | Shared reference models — Industry, Sector, OccupationCode (ISCO/ISIC classifications) | 2 | 0 | 2 |
@@ -41,7 +41,7 @@
 | M1: COBRA Core Platform | Admin Panel Shell | 1.5.3 | User management screens — list, create, edit, deactivate, view assigned roles/countries | 2 | 3 | 5 |
 | M1: COBRA Core Platform | Admin Panel Shell | 1.5.4 | System settings — site configuration, feature toggles, maintenance mode, email settings | 1 | 2 | 3 |
 | M1: COBRA Core Platform | Admin Panel Shell | 1.5.5 | Reusable Vue components — data tables with sort/filter/pagination, form controls, modals, toasts | 0 | 1 | 1 |
-| M1: COBRA Core Platform | Admin Panel Shell | 1.5.6 | Django Admin customizations for superuser-only operations (raw model access) | 1 | 0 | 1 |
+| M1: COBRA Core Platform | Admin Panel Shell | 1.5.6 | Admin panel customizations for superuser-only operations (raw model access) | 1 | 0 | 1 |
 | M1: COBRA Core Platform | Audit Logging (Basic) | 1.6.1 | AuditLog model — user, action, resource type, resource ID, timestamp, IP address | 1 | 0 | 1 |
 | M1: COBRA Core Platform | Audit Logging (Basic) | 1.6.2 | Middleware for automatic audit log creation on API requests (POST, PUT, PATCH, DELETE) | 2 | 0 | 2 |
 | M1: COBRA Core Platform | Audit Logging (Basic) | 1.6.3 | Log export (CSV) for compliance | 1 | 0 | 1 |
@@ -54,15 +54,15 @@
 | M1: COBRA Core Platform | Multi-Language Framework | 1.8.1 | Translation key registry — model for managing translation strings, namespaced by module | 2 | 0 | 2 |
 | M1: COBRA Core Platform | Multi-Language Framework | 1.8.2 | 70-language locale file management — JSON/PO file structure, tooling for import/export | 2 | 0 | 2 |
 | M1: COBRA Core Platform | Multi-Language Framework | 1.8.3 | Locale detection middleware — Accept-Language header, user preference, URL prefix fallback | 2 | 0 | 2 |
-| M1: COBRA Core Platform | Multi-Language Framework | 1.8.4 | Vue i18n integration — plugin setup, lazy-loaded locale bundles, pluralization rules | 0 | 3 | 3 |
+| M1: COBRA Core Platform | Multi-Language Framework | 1.8.4 | i18n integration — plugin setup, lazy-loaded locale bundles, pluralization rules | 0 | 3 | 3 |
 | M1: COBRA Core Platform | Multi-Language Framework | 1.8.5 | Translation import/export CLI — manage.py commands for syncing locale files | 2 | 0 | 2 |
 | M1: COBRA Core Platform | Multi-Language Framework | 1.8.6 | Locale selector component — dropdown in header, persists preference to user profile | 0 | 2 | 2 |
 | M1: COBRA Core Platform | Notification System | 1.9.1 | Notification model — type, recipient, title, message, read/unread, created_at, action_url | 1 | 0 | 1 |
-| M1: COBRA Core Platform | Notification System | 1.9.2 | Email notification service — Django template-based emails, SMTP/SES integration, async via Celery | 2 | 0 | 2 |
+| M1: COBRA Core Platform | Notification System | 1.9.2 | Email notification service — template-based emails, SMTP/SES integration, async via Celery | 2 | 0 | 2 |
 | M1: COBRA Core Platform | Notification System | 1.9.3 | In-app notification API — list, mark-as-read, mark-all-read, unread count | 1 | 0 | 1 |
 | M1: COBRA Core Platform | Notification System | 1.9.4 | Notification center UI — bell icon with unread badge, dropdown panel, click-through to source | 0 | 3 | 3 |
 | M1: COBRA Core Platform | Notification System | 1.9.5 | User notification preferences — per-event-type opt-in/out (email, in-app toggles) | 1 | 2 | 3 |
-| M2: Labour Law Database | Data Models | 2.1.1 | Django models for law categories — minimum wages, working hours, leave, termination, social security | 2 | 0 | 2 |
+| M2: Labour Law Database | Data Models | 2.1.1 | SQLAlchemy models for law categories — minimum wages, working hours, leave, termination, social security | 2 | 0 | 2 |
 | M2: Labour Law Database | Data Models | 2.1.2 | Temporal validity fields — effective_from, effective_to, legislative_reference, gazette_url | 1 | 0 | 1 |
 | M2: Labour Law Database | Data Models | 2.1.3 | Country-specific field configuration — JSONField schema per country for flexible field sets | 1 | 0 | 1 |
 | M2: Labour Law Database | Data Models | 2.1.4 | Model serializers with field-level validation rules | 1 | 0 | 1 |
@@ -104,17 +104,16 @@
 | M3: International Law DB | Legacy Data Migration | 3.4.1 | Analyze legacy international law schema | 1 | 0 | 1 |
 | M3: International Law DB | Legacy Data Migration | 3.4.2 | Write transformation scripts into unified schema | 2 | 0 | 2 |
 | M3: International Law DB | Legacy Data Migration | 3.4.3 | Validation and staging dry-run | 1 | 0 | 1 |
-| M4: CBA Processing Engine | Document Ingestion | 4.1.1 | Upload API — accept PDF, DOCX; file type validation, size limits, virus scanning (ClamAV) | 2 | 0 | 2 |
+| M4: CBA Processing Engine | Document Ingestion | 4.1.1 | Upload API — accept PDF; file type validation, size limits, virus scanning | 2 | 0 | 2 |
 | M4: CBA Processing Engine | Document Ingestion | 4.1.2 | Upload UI — drag-and-drop zone, progress indicator, file list, metadata form | 0 | 3 | 3 |
 | M4: CBA Processing Engine | Document Ingestion | 4.1.3 | File storage abstraction — local/S3-compatible, organized by country/year | 1 | 0 | 1 |
 | M4: CBA Processing Engine | Document Ingestion | 4.1.4 | Document metadata extraction on upload — page count, language detection, file hash | 1 | 0 | 1 |
 | M4: CBA Processing Engine | Document Ingestion | 4.1.5 | Upload validation error handling — clear error messages, retry option | 1 | 1 | 2 |
-| M4: CBA Processing Engine | OCR for Scanned PDFs | 4.2.1 | OCR pipeline integration — Tesseract or cloud OCR service for image-based PDFs | 2 | 0 | 2 |
+| M4: CBA Processing Engine | OCR for Scanned PDFs | 4.2.1 | OCR pipeline integration for image-based PDFs | 2 | 0 | 2 |
 | M4: CBA Processing Engine | OCR for Scanned PDFs | 4.2.2 | Scanned PDF detection — heuristic to distinguish text-based vs. image-based pages | 1 | 0 | 1 |
 | M4: CBA Processing Engine | OCR for Scanned PDFs | 4.2.3 | OCR output normalization — clean extracted text, preserve page structure | 1 | 0 | 1 |
 | M4: CBA Processing Engine | AI Document Conversion | 4.3.1 | PDF→text extraction pipeline — handle multi-column, tables, headers, footnotes | 3 | 0 | 3 |
-| M4: CBA Processing Engine | AI Document Conversion | 4.3.2 | DOCX→structured HTML conversion — preserve formatting, lists, tables | 2 | 0 | 2 |
-| M4: CBA Processing Engine | AI Document Conversion | 4.3.3 | LLM-assisted structure detection — identify sections, articles, clauses using single LLM provider | 3 | 0 | 3 |
+| M4: CBA Processing Engine | AI Document Conversion | 4.3.2 | LLM-assisted structure detection — identify sections, articles, clauses using single LLM provider | 3 | 0 | 3 |
 | M4: CBA Processing Engine | Structured Data Extraction | 4.4.1 | CBA data model field extraction — parties, effective dates, industry, coverage scope | 3 | 0 | 3 |
 | M4: CBA Processing Engine | Structured Data Extraction | 4.4.2 | Extraction prompt engineering — per-field prompts with few-shot examples | 2 | 0 | 2 |
 | M4: CBA Processing Engine | Structured Data Extraction | 4.4.3 | Extraction output validation — type checking, range validation, mandatory field enforcement | 1 | 0 | 1 |
@@ -214,7 +213,7 @@
 | M8: Export & Distribution | API Key Management | 8.6.3 | Key management admin UI — list keys, filter by consumer/tier, rotate, revoke, view usage | 1 | 3 | 4 |
 | M8: Export & Distribution | API Key Management | 8.6.4 | Key authentication middleware — validate, resolve tier, inject scoping | 1 | 1 | 2 |
 | M8: Export & Distribution | Rate Limiting & Revocation | 8.7.1 | Per-consumer rate limit configuration — tiered limits stored with API key | 1 | 0 | 1 |
-| M8: Export & Distribution | Rate Limiting & Revocation | 8.7.2 | Django throttle layer — token bucket implementation with Redis backend | 2 | 0 | 2 |
+| M8: Export & Distribution | Rate Limiting & Revocation | 8.7.2 | Throttle layer — token bucket implementation with in-memory cache backend | 2 | 0 | 2 |
 | M8: Export & Distribution | Rate Limiting & Revocation | 8.7.3 | Instant revocation — key deactivation propagates immediately | 1 | 0 | 1 |
 | M8: Export & Distribution | Rate Limiting & Revocation | 8.7.4 | Rate limit status display in key management UI | 0 | 1 | 1 |
 | M9: Translation & Multilingual | Language Service Layer | 9.1.1 | Language-aware content serving API — resolve locale, return correct content version | 3 | 0 | 3 |
@@ -265,13 +264,13 @@
 | M11: Unified API Gateway | Per-Consumer Scoping | 11.2.2 | Scope resolution middleware — API key → consumer → allowed datasets, countries, actions | 2 | 0 | 2 |
 | M11: Unified API Gateway | Per-Consumer Scoping | 11.2.3 | Scope enforcement in querysets — automatic filtering based on resolved scope | 1 | 0 | 1 |
 | M11: Unified API Gateway | Rate Limiting | 11.3.1 | Tiered rate limit configuration — limits per tier (free/subscriber/partner) | 1 | 0 | 1 |
-| M11: Unified API Gateway | Rate Limiting | 11.3.2 | Django REST throttle classes with Redis-backed counters | 2 | 0 | 2 |
+| M11: Unified API Gateway | Rate Limiting | 11.3.2 | REST throttle classes with in-memory cache-backed counters | 2 | 0 | 2 |
 | M11: Unified API Gateway | Rate Limiting | 11.3.3 | Rate limit headers in responses (X-RateLimit-Remaining, X-RateLimit-Reset) | 1 | 0 | 1 |
 | M11: Unified API Gateway | Usage Analytics | 11.4.1 | Request logging model — consumer, endpoint, timestamp, response time, status code | 2 | 0 | 2 |
 | M11: Unified API Gateway | Usage Analytics | 11.4.2 | Usage aggregation — daily/weekly/monthly totals per consumer, per endpoint | 1 | 0 | 1 |
 | M11: Unified API Gateway | Usage Analytics | 11.4.3 | Consumer usage dashboard — charts, top endpoints, quota utilization, time-series | 1 | 3 | 4 |
 | M11: Unified API Gateway | Usage Analytics | 11.4.4 | Quota monitoring alerts — trigger notification at 80%/100% usage thresholds | 0 | 1 | 1 |
-| M11: Unified API Gateway | API Documentation | 11.5.1 | OpenAPI/Swagger spec auto-generation from Django REST serializers | 1 | 0 | 1 |
+| M11: Unified API Gateway | API Documentation | 11.5.1 | OpenAPI spec auto-generation from FastAPI | 1 | 0 | 1 |
 | M11: Unified API Gateway | API Documentation | 11.5.2 | Swagger UI hosted at /api/docs/ with authentication support | 1 | 0 | 1 |
 | M11: Unified API Gateway | API Documentation | 11.5.3 | Narrative API guide — getting started, authentication, pagination, examples | 1 | 0 | 1 |
 | M12: LLM Query Interface | NL Query API | 12.1.1 | Query endpoint — accept text, language parameter; return structured answer + sources | 2 | 0 | 2 |
@@ -289,11 +288,11 @@
 | M12: LLM Query Interface | Access Layer Integration | 12.5.1 | Authentication check — validate email/SMS registration or subscription before query | 2 | 0 | 2 |
 | M12: LLM Query Interface | Access Layer Integration | 12.5.2 | Tier-based query limits — daily/monthly query caps per user tier | 1 | 0 | 1 |
 | M12: LLM Query Interface | Access Layer Integration | 12.5.3 | Query UI widget — input box, response display, source links, limit indicator | 1 | 3 | 4 |
-| M12: LLM Query Interface | Response Caching | 12.6.1 | Cache layer — Redis-based, keyed by normalized query + language + data version hash | 1 | 0 | 1 |
+| M12: LLM Query Interface | Response Caching | 12.6.1 | Cache layer — in-memory cache, keyed by normalized query + language + data version hash | 1 | 0 | 1 |
 | M12: LLM Query Interface | Response Caching | 12.6.2 | Cache invalidation — trigger on data updates (publish events), TTL fallback | 1 | 0 | 1 |
 | M12: LLM Query Interface | Response Caching | 12.6.3 | Cache hit/miss monitoring and analytics | 1 | 0 | 1 |
-| M13: Monitoring | Prometheus + Grafana | 13.1.1 | Prometheus setup with Docker Compose — Django metrics exporter, service discovery | 1 | 0 | 1 |
-| M13: Monitoring | Prometheus + Grafana | 13.1.2 | Grafana provisioning — datasource, default dashboards (system, Django, PG, Celery) | 1 | 0 | 1 |
+| M13: Monitoring | Prometheus + Grafana | 13.1.1 | Prometheus setup with Docker Compose — FastAPI metrics exporter, service discovery | 1 | 0 | 1 |
+| M13: Monitoring | Prometheus + Grafana | 13.1.2 | Grafana provisioning — datasource, default dashboards (system, FastAPI, PG, Celery) | 1 | 0 | 1 |
 | M13: Monitoring | Prometheus + Grafana | 13.1.3 | Custom metrics — record counts per module, export volumes, LLM usage, queue depths | 1 | 0 | 1 |
 | M13: Monitoring | Alerting Rules | 13.2.1 | Security alerts — 403 spikes, failed login clusters, geo-anomalous access | 1 | 0 | 1 |
 | M13: Monitoring | Alerting Rules | 13.2.2 | Application alerts — error rate thresholds, response time p95/p99, Celery queue backlog | 1 | 0 | 1 |
@@ -302,20 +301,20 @@
 | M13: Monitoring | Log Aggregation | 13.3.1 | Structured logging setup — JSON format, consistent fields (request_id, user_id, module) | 1 | 0 | 1 |
 | M13: Monitoring | Log Aggregation | 13.3.2 | Log aggregation stack — Loki or similar with Docker Compose, retention policies | 1 | 0 | 1 |
 | M13: Monitoring | Log Aggregation | 13.3.3 | Grafana log dashboard — search, filter, log-to-metric correlation | 1 | 0 | 1 |
-| M13: Monitoring | Health Checks & SLA | 13.4.1 | Health check endpoints per service — /health/ with DB, Redis, Celery, storage checks | 1 | 0 | 1 |
+| M13: Monitoring | Health Checks & SLA | 13.4.1 | Health check endpoints per service — /health/ with DB, cache, Celery, storage checks | 1 | 0 | 1 |
 | M13: Monitoring | Health Checks & SLA | 13.4.2 | Uptime tracking — synthetic probes, availability calculation | 1 | 0 | 1 |
 | M13: Monitoring | Health Checks & SLA | 13.4.3 | SLA dashboard — uptime %, response time trends, incident timeline | 1 | 0 | 1 |
-| M14: Security Hardening | CI/CD Security Gates | 14.1.1 | SAST integration — Bandit for Python, ESLint security plugin for Vue.js, fail on critical | 2 | 0 | 2 |
-| M14: Security Hardening | CI/CD Security Gates | 14.1.2 | Dependency scanning — pip-audit, npm audit; block merge on known critical CVEs | 1 | 0 | 1 |
-| M14: Security Hardening | CI/CD Security Gates | 14.1.3 | Secret scanning — gitleaks in pre-commit hook + CI pipeline | 1 | 0 | 1 |
+| M14: Security Hardening | CI/CD Security Gates | 14.1.1 | SAST integration — fail on critical findings | 2 | 0 | 2 |
+| M14: Security Hardening | CI/CD Security Gates | 14.1.2 | Dependency scanning — block merge on known critical CVEs | 1 | 0 | 1 |
+| M14: Security Hardening | CI/CD Security Gates | 14.1.3 | Secret scanning — pre-commit hook + CI pipeline | 1 | 0 | 1 |
 | M14: Security Hardening | CI/CD Security Gates | 14.1.4 | CI pipeline config — stage ordering, failure gates, bypass rules for false positives | 1 | 0 | 1 |
-| M14: Security Hardening | Container Scanning | 14.2.1 | Trivy integration in build pipeline — scan base images + application image | 1 | 0 | 1 |
+| M14: Security Hardening | Container Scanning | 14.2.1 | Container image scanning in build pipeline — scan base images + application image | 1 | 0 | 1 |
 | M14: Security Hardening | Container Scanning | 14.2.2 | Vulnerability suppression workflow — triage, document accepted risks, re-review cadence | 1 | 0 | 1 |
 | M14: Security Hardening | Container Scanning | 14.2.3 | Base image policy — approved base images list, automated rebuild on upstream updates | 1 | 0 | 1 |
-| M14: Security Hardening | DAST | 14.3.1 | OWASP ZAP setup against staging environment — automated scan on deploy | 1 | 0 | 1 |
-| M14: Security Hardening | DAST | 14.3.2 | ZAP scan profile tuning — auth handling, crawl scope, false positive suppression | 1 | 0 | 1 |
+| M14: Security Hardening | DAST | 14.3.1 | DAST setup against staging environment — automated scan on deploy | 1 | 0 | 1 |
+| M14: Security Hardening | DAST | 14.3.2 | Scan profile tuning — auth handling, crawl scope, false positive suppression | 1 | 0 | 1 |
 | M14: Security Hardening | DAST | 14.3.3 | Advisory finding triage process — severity classification, sprint assignment | 1 | 0 | 1 |
-| M14: Security Hardening | Encryption Setup | 14.4.1 | TLS 1.2+ enforcement — reverse proxy config, HSTS headers, certificate management | 1 | 0 | 1 |
+| M14: Security Hardening | Encryption Setup | 14.4.1 | TLS 1.3 enforcement — reverse proxy config, HSTS headers, certificate management | 1 | 0 | 1 |
 | M14: Security Hardening | Encryption Setup | 14.4.2 | Database encryption at rest — pgcrypto for sensitive fields (API keys, PII) | 1 | 0 | 1 |
 | M14: Security Hardening | Encryption Setup | 14.4.3 | Secrets management — environment-based injection, no secrets in code or config files | 1 | 0 | 1 |
 | M14: Security Hardening | Encryption Setup | 14.4.4 | Backup encryption — AES-256 encrypted database backups | 1 | 0 | 1 |

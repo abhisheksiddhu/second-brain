@@ -95,7 +95,7 @@ The database is **never directly accessible** from the internet or from any comp
 - **Action-level granularity:** `view`, `edit`, `approve`, `export`, and `delete` are separate permissions. An annotator can edit but not approve. A viewer can see but not export.
 - **Object-level (where needed):** For sensitive records such as specific CBA ownership, permissions can be assigned at the individual record level.
 - **Server-side enforcement only:** Frontend hides UI elements for UX convenience, but the backend is the sole enforcement boundary. Every request is validated regardless of how it arrives.
-- **DB-level mirroring:** The Django DB user has only `SELECT`, `INSERT`, `UPDATE` on operational tables. `DELETE` is restricted to an admin migration role. Audit tables have **no** `UPDATE` or `DELETE` grants for any application role.
+- **DB-level mirroring:** The application DB user has only `SELECT`, `INSERT`, `UPDATE` on operational tables. `DELETE` is restricted to an admin migration role. Audit tables have **no** `UPDATE` or `DELETE` grants for any application role.
 
 ---
 
@@ -103,7 +103,7 @@ The database is **never directly accessible** from the internet or from any comp
 
 | Layer                     | Encryption             | Detail                                                                                                                                                                              |
 | ------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **In transit (external)** | TLS 1.2+               | Terminated at the reverse proxy. Strong cipher suites only.                                                                                                                         |
+| **In transit (external)** | TLS 1.3               | Terminated at the reverse proxy. Strong cipher suites only.                                                                                                                         |
 | **In transit (internal)** | mTLS                   | Pod-to-pod encrypted via service mesh (Linkerd or equivalent) or K8s-native TLS.                                                                                                    |
 | **Postgres at rest**      | AES-256 full-disk      | Provider-level block storage encryption. Column-level encryption via `pgcrypto` available for specific sensitive fields.                                                            |
 | **Backups**               | Encrypted before write | DB dumps encrypted with GPG or provider-managed encryption. Backup keys rotated quarterly.                                                                                          |
@@ -116,14 +116,14 @@ The database is **never directly accessible** from the internet or from any comp
 
 Every deployment passes through:
 
-| Gate                                             | Stage                | Blocks Deploy?                                    |
-| ------------------------------------------------ | -------------------- | ------------------------------------------------- |
-| **SAST** (Static analysis — `bandit`)            | PR / merge request   | Yes — critical/high findings block merge          |
-| **Dependency scanning** (`safety` / `pip-audit`) | PR / merge request   | Yes — known CVEs in dependencies block merge      |
-| **Container image scan** (`trivy`)               | Build pipeline       | Yes — critical vulns block image push             |
-| **Secret detection** (`gitleaks`)                | Pre-commit hook + CI | Yes — hardcoded secrets block commit              |
-| **DAST** (Dynamic scan — `OWASP ZAP`)            | Staging deploy       | Advisory — findings triaged within sprint         |
-| **STRIDE review**                                | UAT milestone        | Yes — unmitigated high-risk threats block go-live |
+| Gate                                | Stage                | Blocks Deploy?                                    |
+| ----------------------------------- | -------------------- | ------------------------------------------------- |
+| **SAST** (Static analysis)          | PR / merge request   | Yes — critical/high findings block merge          |
+| **Dependency scanning**             | PR / merge request   | Yes — known CVEs in dependencies block merge      |
+| **Container image scan**            | Build pipeline       | Yes — critical vulns block image push             |
+| **Secret detection**                | Pre-commit hook + CI | Yes — hardcoded secrets block commit              |
+| **DAST** (Dynamic scan)             | Staging deploy       | Advisory — findings triaged within sprint         |
+| **STRIDE review**                   | UAT milestone        | Yes — unmitigated high-risk threats block go-live |
 
 ---
 
@@ -132,7 +132,7 @@ Every deployment passes through:
 **Every data mutation, access event, and administrative action is captured.**
 
 ```
-Django App  ────►  Audit Log Table  ────►  Log Archival
+FastAPI App  ────►  Audit Log Table  ────►  Log Archival
 (middleware)       (append-only)           (encrypted object storage)
 ```
 
@@ -195,7 +195,7 @@ WageIndicator's question has three parts: **Is the system secure?** **Can we con
 
 | Concern                  | How It's Addressed                                                                                                                                    |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Data stays in Europe** | Single-region EU deployment on European providers (Hetzner, OVHcloud, Scaleway). No US vendors involved. No data leaves EU jurisdiction.              |
+| **Data stays in Europe** | Single-region EU deployment on European provider (OVHcloud). No US vendors involved. No data leaves EU jurisdiction.              |
 | **Encrypted everywhere** | All data encrypted in transit (TLS) and at rest (AES-256). Backups encrypted. Secrets stored in a vault — never in code.                              |
 | **Audited by design**    | Every action — data edits, exports, permission changes, logins — is logged with who, what, when, and from where. Logs are immutable and tamper-proof. |
 | **Tested before launch** | Formal threat modeling during design phase. Security scans run automatically on every code change. Dynamic security testing before go-live.           |

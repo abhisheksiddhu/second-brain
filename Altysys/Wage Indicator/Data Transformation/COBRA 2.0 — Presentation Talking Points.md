@@ -120,7 +120,7 @@
 | Database       | PostgreSQL           | Battle-tested for complex queries, JSONB for flexible schemas, strong data integrity |
 | Workflow / ETL | Apache Airflow       | Industry standard for data pipeline orchestration, DAG-based, observable             |
 | Search         | Elasticsearch        | Full-text search across multilingual content, fast aggregation                       |
-| Caching        | DragonFly            | Redis-compatible, higher throughput for caching layer                                |
+| Caching        | In-memory cache      | High-throughput caching layer (specific engine finalized in Discovery)                |
 | Monitoring     | Prometheus + Grafana | Open-source, Kubernetes-native observability                                         |
 | Analytics      | Metabase             | Self-hosted BI dashboards for WageIndicator team                                     |
 | Infrastructure | Docker / Kubernetes  | Container orchestration, scaling, self-healing                                       |
@@ -128,7 +128,7 @@
 **Cloud infrastructure context:**
 
 - Single-region EU deployment — no multi-region needed
-- Strict no-US-vendor policy — European providers: Hetzner, OVHcloud, Scaleway
+- Strict no-US-vendor policy — European provider: OVHcloud
 - Self-hosted open source stack: K8s, MinIO, GitLab, Nextcloud, Airflow
 - Data is non-PII / summary in nature — but governance is still critical for commercial data distribution
 - Phased migration — project-by-project, not big-bang
@@ -175,7 +175,7 @@
 
 - "The database is never directly accessible from the internet. Period."
 - Walk through the layered architecture:
-  - Public → Reverse Proxy (WAF, rate limiting, TLS) → Internal network → Django API / Airflow → Private subnet → PostgreSQL / Elasticsearch
+  - Public → Reverse Proxy (WAF, rate limiting, TLS) → Internal network → FastAPI / Airflow → Private subnet → PostgreSQL / Elasticsearch
   - K8s NetworkPolicy restricts DB ingress to labeled app pods only
   - No direct SSH — admin only via bastion host with MFA + audit logging
 - "Even if someone compromises the web layer, the database is on a separate network segment."
@@ -186,7 +186,7 @@
 
 ### Authentication — three mechanisms for three user types
 
-1. **WageIndicator staff:** Django session auth + MFA. Short session TTLs (30 min idle, 8 hr absolute).
+1. **WageIndicator staff:** Session auth + MFA. Short session TTLs (30 min idle, 8 hr absolute).
 2. **External API consumers:** API keys hashed with SHA-256 (plaintext never stored). Each key scoped to specific datasets, countries, rate limits.
 3. **Internal service-to-service:** Short-lived JWTs (5-min TTL), asymmetrically signed. Even internal services don't get permanent credentials.
 
@@ -200,15 +200,15 @@
 
 ### Encryption
 
-- TLS 1.2+ external, mTLS internal (pod-to-pod)
+- TLS 1.3 external, mTLS internal (pod-to-pod)
 - AES-256 at rest for Postgres, encrypted backups, Vault-managed secrets
 - "No stage where data sits unencrypted."
 
 ### CI/CD Security Gates
 
 - Six automated gates — four are hard blockers:
-  - SAST (Bandit), dependency scanning (pip-audit), container image scan (Trivy), secret detection (gitleaks) — all block deployment
-  - DAST (OWASP ZAP) — advisory, triaged within sprint
+  - SAST, dependency scanning, container image scan, secret detection — all block deployment
+  - DAST — advisory, triaged within sprint
   - STRIDE review at UAT — blocks go-live
 - "Code with security issues cannot ship. It's not a judgment call — it's automated enforcement."
 

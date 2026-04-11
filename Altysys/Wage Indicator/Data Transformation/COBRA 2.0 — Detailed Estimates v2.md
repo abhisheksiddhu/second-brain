@@ -9,14 +9,14 @@
 | Infrastructure                              | Docker Compose setup, CI/CD pipelines, staging env on EU cloud                                                |    2    |    0    |     2      |
 | Dev Environment                             | docker-compose.yml, seed data scripts, .env templates, onboarding README                                      |    1    |    0    |     1      |
 | Security                                    | STRIDE threat modeling — first-pass threat register, map mitigations to backlog                               |    1    |    0    |     1      |
-| LLM Evaluation                              | Test 3-5 sample documents against candidate models, accuracy comparison                                       |    3    |    0    |     3      |
+| LLM Evaluation                              | Test 50 sample documents against candidate models, accuracy comparison                                        |    3    |    0    |     3      |
 | Sign-off                                    | Tech stack confirmation, ADR documentation, team kickoff                                                      |    1    |    0    |     1      |
 | **M1: COBRA Core Platform**                 |                                                                                                               |         |         |            |
 | Unified DB Schema                           | PostgreSQL schema DDL — create all core tables, constraints, foreign keys                                     |    3    |    0    |     3      |
-| Unified DB Schema                           | Django model definitions and migration files for core schema                                                  |    2    |    0    |     2      |
+| Unified DB Schema                           | SQLAlchemy model definitions and migration files for core schema                                              |    2    |    0    |     2      |
 | Unified DB Schema                           | Seed data — 180+ countries (ISO 3166), 75+ languages (ISO 639), currencies, regions                           |    2    |    0    |     2      |
 | Unified DB Schema                           | Database indexing strategy — composite indexes, partial indexes for common query patterns                     |    2    |    0    |     2      |
-| Unified DB Schema                           | Connection pooling (pgBouncer) and query performance baseline                                                 |    1    |    0    |     1      |
+| Unified DB Schema                           | Connection pooling and query performance baseline                                                             |    1    |    0    |     1      |
 | Core Data Models                            | Country model — ISO codes, region, sub-region, currency, metadata, active flag                                |    2    |    0    |     2      |
 | Core Data Models                            | Language model — locale code, script direction (LTR/RTL), fallback language chain                             |    2    |    0    |     2      |
 | Core Data Models                            | Shared reference models — Industry, Sector, OccupationCode (ISCO/ISIC classifications)                        |    2    |    0    |     2      |
@@ -43,7 +43,7 @@
 | Admin Panel Shell                           | User management screens — list, create, edit, deactivate, view assigned roles/countries                       |    2    |    3    |     5      |
 | Admin Panel Shell                           | System settings — site configuration, feature toggles, maintenance mode, email settings                       |    1    |    2    |     3      |
 | Admin Panel Shell                           | Reusable Vue components — data tables with sort/filter/pagination, form controls, modals, toasts              |    0    |    1    |     1      |
-| Admin Panel Shell                           | Django Admin customizations for superuser-only operations (raw model access)                                  |    1    |    0    |     1      |
+| Admin Panel Shell                           | Admin panel customizations for superuser-only operations (raw model access)                                   |    1    |    0    |     1      |
 | Audit Logging (Basic)                       | AuditLog model — user, action, resource type, resource ID, timestamp, IP address                              |    1    |    0    |     1      |
 | Audit Logging (Basic)                       | Middleware for automatic audit log creation on API requests (POST, PUT, PATCH, DELETE)                        |    2    |    0    |     2      |
 | Audit Logging (Basic)                       | Log export (CSV) for compliance                                                                               |    1    |    0    |     1      |
@@ -56,16 +56,16 @@
 | Multi-Language Framework                    | Translation key registry — model for managing translation strings, namespaced by module                       |    2    |    0    |     2      |
 | Multi-Language Framework                    | 70-language locale file management — JSON/PO file structure, tooling for import/export                        |    2    |    0    |     2      |
 | Multi-Language Framework                    | Locale detection middleware — Accept-Language header, user preference, URL prefix fallback                    |    2    |    0    |     2      |
-| Multi-Language Framework                    | Vue i18n integration — plugin setup, lazy-loaded locale bundles, pluralization rules                          |    0    |    3    |     3      |
+| Multi-Language Framework                    | i18n integration — plugin setup, lazy-loaded locale bundles, pluralization rules                              |    0    |    3    |     3      |
 | Multi-Language Framework                    | Translation import/export CLI — manage.py commands for syncing locale files                                   |    2    |    0    |     2      |
 | Multi-Language Framework                    | Locale selector component — dropdown in header, persists preference to user profile                           |    0    |    2    |     2      |
 | Notification System                         | Notification model — type, recipient, title, message, read/unread, created_at, action_url                     |    1    |    0    |     1      |
-| Notification System                         | Email notification service — Django template-based emails, SMTP/SES integration, async via Celery             |    2    |    0    |     2      |
+| Notification System                         | Email notification service — template-based emails, SMTP/SES integration, async via Celery                    |    2    |    0    |     2      |
 | Notification System                         | In-app notification API — list, mark-as-read, mark-all-read, unread count                                     |    1    |    0    |     1      |
 | Notification System                         | Notification center UI — bell icon with unread badge, dropdown panel, click-through to source                 |    0    |    3    |     3      |
 | Notification System                         | User notification preferences — per-event-type opt-in/out (email, in-app toggles)                             |    1    |    2    |     3      |
 | **M2: Labour Law Database**                 |                                                                                                               |         |         |            |
-| Data Models                                 | Django models for law categories — minimum wages, working hours, leave, termination, social security          |    2    |    0    |     2      |
+| Data Models                                 | SQLAlchemy models for law categories — minimum wages, working hours, leave, termination, social security      |    2    |    0    |     2      |
 | Data Models                                 | Temporal validity fields — effective_from, effective_to, legislative_reference, gazette_url                   |    1    |    0    |     1      |
 | Data Models                                 | Country-specific field configuration — JSONField schema per country for flexible field sets                   |    1    |    0    |     1      |
 | Data Models                                 | Model serializers with field-level validation rules                                                           |    1    |    0    |     1      |
@@ -109,16 +109,15 @@
 | Legacy Data Migration                       | Write transformation scripts into unified schema                                                              |    2    |    0    |     2      |
 | Legacy Data Migration                       | Validation and staging dry-run                                                                                |    1    |    0    |     1      |
 | **M4: CBA Processing Engine**               |                                                                                                               |         |         |            |
-| Document Ingestion                          | Upload API — accept PDF, DOCX; file type validation, size limits, virus scanning (ClamAV)                     |    2    |    0    |     2      |
+| Document Ingestion                          | Upload API — accept PDF; file type validation, size limits, virus scanning                                    |    2    |    0    |     2      |
 | Document Ingestion                          | Upload UI — drag-and-drop zone, progress indicator, file list, metadata form                                  |    0    |    3    |     3      |
 | Document Ingestion                          | File storage abstraction — local/S3-compatible, organized by country/year                                     |    1    |    0    |     1      |
 | Document Ingestion                          | Document metadata extraction on upload — page count, language detection, file hash                            |    1    |    0    |     1      |
 | Document Ingestion                          | Upload validation error handling — clear error messages, retry option                                         |    1    |    1    |     2      |
-| OCR for Scanned PDFs                        | OCR pipeline integration — Tesseract or cloud OCR service for image-based PDFs                                |    2    |    0    |     2      |
+| OCR for Scanned PDFs                        | OCR pipeline integration for image-based PDFs                                                                 |    2    |    0    |     2      |
 | OCR for Scanned PDFs                        | Scanned PDF detection — heuristic to distinguish text-based vs. image-based pages                             |    1    |    0    |     1      |
 | OCR for Scanned PDFs                        | OCR output normalization — clean extracted text, preserve page structure                                      |    1    |    0    |     1      |
 | AI Document Conversion                      | PDF→text extraction pipeline — handle multi-column, tables, headers, footnotes                                |    3    |    0    |     3      |
-| AI Document Conversion                      | DOCX→structured HTML conversion — preserve formatting, lists, tables                                          |    2    |    0    |     2      |
 | AI Document Conversion                      | LLM-assisted structure detection — identify sections, articles, clauses using single LLM provider             |    3    |    0    |     3      |
 | Structured Data Extraction                  | CBA data model field extraction — parties, effective dates, industry, coverage scope                          |    3    |    0    |     3      |
 | Structured Data Extraction                  | Extraction prompt engineering — per-field prompts with few-shot examples                                      |    2    |    0    |     2      |
@@ -223,7 +222,7 @@
 | API Key Management                          | Key management admin UI — list keys, filter by consumer/tier, rotate, revoke, view usage                      |    1    |    3    |     4      |
 | API Key Management                          | Key authentication middleware — validate, resolve tier, inject scoping                                        |    1    |    1    |     2      |
 | Rate Limiting & Revocation                  | Per-consumer rate limit configuration — tiered limits stored with API key                                     |    1    |    0    |     1      |
-| Rate Limiting & Revocation                  | Django throttle layer — token bucket implementation with Redis backend                                        |    2    |    0    |     2      |
+| Rate Limiting & Revocation                  | Throttle layer — token bucket implementation with in-memory cache backend                                     |    2    |    0    |     2      |
 | Rate Limiting & Revocation                  | Instant revocation — key deactivation propagates immediately                                                  |    1    |    0    |     1      |
 | Rate Limiting & Revocation                  | Rate limit status display in key management UI                                                                |    0    |    1    |     1      |
 | **M9: Translation & Multilingual Support**  |                                                                                                               |         |         |            |
@@ -277,13 +276,13 @@
 | Per-Consumer Scoping                        | Scope resolution middleware — API key → consumer → allowed datasets, countries, actions                       |    2    |    0    |     2      |
 | Per-Consumer Scoping                        | Scope enforcement in querysets — automatic filtering based on resolved scope                                  |    1    |    0    |     1      |
 | Rate Limiting                               | Tiered rate limit configuration — limits per tier (free/subscriber/partner)                                   |    1    |    0    |     1      |
-| Rate Limiting                               | Django REST throttle classes with Redis-backed counters                                                       |    2    |    0    |     2      |
+| Rate Limiting                               | REST throttle classes with in-memory cache-backed counters                                                    |    2    |    0    |     2      |
 | Rate Limiting                               | Rate limit headers in responses (X-RateLimit-Remaining, X-RateLimit-Reset)                                    |    1    |    0    |     1      |
 | Usage Analytics                             | Request logging model — consumer, endpoint, timestamp, response time, status code                             |    2    |    0    |     2      |
 | Usage Analytics                             | Usage aggregation — daily/weekly/monthly totals per consumer, per endpoint                                    |    1    |    0    |     1      |
 | Usage Analytics                             | Consumer usage dashboard — charts, top endpoints, quota utilization, time-series                              |    1    |    3    |     4      |
 | Usage Analytics                             | Quota monitoring alerts — trigger notification at 80%/100% usage thresholds                                   |    0    |    1    |     1      |
-| API Documentation                           | OpenAPI/Swagger spec auto-generation from Django REST serializers                                             |    1    |    0    |     1      |
+| API Documentation                           | OpenAPI spec auto-generation from FastAPI                                                                     |    1    |    0    |     1      |
 | API Documentation                           | Swagger UI hosted at /api/docs/ with authentication support                                                   |    1    |    0    |     1      |
 | API Documentation                           | Narrative API guide — getting started, authentication, pagination, examples                                   |    1    |    0    |     1      |
 | **M12: LLM Query Interface**                |                                                                                                               |         |         |            |
@@ -302,12 +301,12 @@
 | Access Layer Integration                    | Authentication check — validate email/SMS registration or subscription before query                           |    2    |    0    |     2      |
 | Access Layer Integration                    | Tier-based query limits — daily/monthly query caps per user tier                                              |    1    |    0    |     1      |
 | Access Layer Integration                    | Query UI widget — input box, response display, source links, limit indicator                                  |    1    |    3    |     4      |
-| Response Caching                            | Cache layer — Redis-based, keyed by normalized query + language + data version hash                           |    1    |    0    |     1      |
+| Response Caching                            | Cache layer — in-memory cache, keyed by normalized query + language + data version hash                       |    1    |    0    |     1      |
 | Response Caching                            | Cache invalidation — trigger on data updates (publish events), TTL fallback                                   |    1    |    0    |     1      |
 | Response Caching                            | Cache hit/miss monitoring and analytics                                                                       |    1    |    0    |     1      |
 | **M13: Monitoring & Observability**         |                                                                                                               |         |         |            |
-| Prometheus + Grafana                        | Prometheus setup with Docker Compose — Django metrics exporter, service discovery                             |    1    |    0    |     1      |
-| Prometheus + Grafana                        | Grafana provisioning — datasource, default dashboards (system, Django, PG, Celery)                            |    1    |    0    |     1      |
+| Prometheus + Grafana                        | Prometheus setup with Docker Compose — FastAPI metrics exporter, service discovery                             |    1    |    0    |     1      |
+| Prometheus + Grafana                        | Grafana provisioning — datasource, default dashboards (system, FastAPI, PG, Celery)                           |    1    |    0    |     1      |
 | Prometheus + Grafana                        | Custom metrics — record counts per module, export volumes, LLM usage, queue depths                            |    1    |    0    |     1      |
 | Alerting Rules                              | Security alerts — 403 spikes, failed login clusters, geo-anomalous access                                     |    1    |    0    |     1      |
 | Alerting Rules                              | Application alerts — error rate thresholds, response time p95/p99, Celery queue backlog                       |    1    |    0    |     1      |
@@ -316,21 +315,21 @@
 | Log Aggregation                             | Structured logging setup — JSON format, consistent fields (request_id, user_id, module)                       |    1    |    0    |     1      |
 | Log Aggregation                             | Log aggregation stack — Loki or similar with Docker Compose, retention policies                               |    1    |    0    |     1      |
 | Log Aggregation                             | Grafana log dashboard — search, filter, log-to-metric correlation                                             |    1    |    0    |     1      |
-| Health Checks & SLA                         | Health check endpoints per service — /health/ with DB, Redis, Celery, storage checks                          |    1    |    0    |     1      |
+| Health Checks & SLA                         | Health check endpoints per service — /health/ with DB, cache, Celery, storage checks                          |    1    |    0    |     1      |
 | Health Checks & SLA                         | Uptime tracking — synthetic probes, availability calculation                                                  |    1    |    0    |     1      |
 | Health Checks & SLA                         | SLA dashboard — uptime %, response time trends, incident timeline                                             |    1    |    0    |     1      |
 | **M14: Security Hardening**                 |                                                                                                               |         |         |            |
-| CI/CD Security Gates                        | SAST integration — Bandit for Python, ESLint security plugin for Vue.js, fail on critical                     |    2    |    0    |     2      |
-| CI/CD Security Gates                        | Dependency scanning — pip-audit, npm audit; block merge on known critical CVEs                                |    1    |    0    |     1      |
-| CI/CD Security Gates                        | Secret scanning — gitleaks in pre-commit hook + CI pipeline                                                   |    1    |    0    |     1      |
+| CI/CD Security Gates                        | SAST integration — static analysis for backend and frontend, fail on critical                                 |    2    |    0    |     2      |
+| CI/CD Security Gates                        | Dependency scanning — block merge on known critical CVEs                                                     |    1    |    0    |     1      |
+| CI/CD Security Gates                        | Secret scanning — pre-commit hook + CI pipeline                                                              |    1    |    0    |     1      |
 | CI/CD Security Gates                        | CI pipeline config — stage ordering, failure gates, bypass rules for false positives                          |    1    |    0    |     1      |
-| Container Scanning                          | Trivy integration in build pipeline — scan base images + application image                                    |    1    |    0    |     1      |
+| Container Scanning                          | Container image scanning in build pipeline — scan base images + application image                             |    1    |    0    |     1      |
 | Container Scanning                          | Vulnerability suppression workflow — triage, document accepted risks, re-review cadence                       |    1    |    0    |     1      |
 | Container Scanning                          | Base image policy — approved base images list, automated rebuild on upstream updates                          |    1    |    0    |     1      |
-| DAST                                        | OWASP ZAP setup against staging environment — automated scan on deploy                                        |    1    |    0    |     1      |
-| DAST                                        | ZAP scan profile tuning — auth handling, crawl scope, false positive suppression                              |    1    |    0    |     1      |
+| DAST                                        | DAST setup against staging environment — automated scan on deploy                                             |    1    |    0    |     1      |
+| DAST                                        | Scan profile tuning — auth handling, crawl scope, false positive suppression                                  |    1    |    0    |     1      |
 | DAST                                        | Advisory finding triage process — severity classification, sprint assignment                                  |    1    |    0    |     1      |
-| Encryption Setup                            | TLS 1.2+ enforcement — reverse proxy config, HSTS headers, certificate management                             |    1    |    0    |     1      |
+| Encryption Setup                            | TLS 1.3 enforcement — reverse proxy config, HSTS headers, certificate management                              |    1    |    0    |     1      |
 | Encryption Setup                            | Database encryption at rest — pgcrypto for sensitive fields (API keys, PII)                                   |    1    |    0    |     1      |
 | Encryption Setup                            | Secrets management — environment-based injection, no secrets in code or config files                          |    1    |    0    |     1      |
 | Encryption Setup                            | Backup encryption — AES-256 encrypted database backups                                                        |    1    |    0    |     1      |

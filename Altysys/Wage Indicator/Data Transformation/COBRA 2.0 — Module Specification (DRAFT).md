@@ -52,7 +52,7 @@
 | ------------------------------------ | -------------------------------------------------------------------------------------- |
 | Legacy schema audit & data profiling | Map all existing COBRA databases, 30+ Excel files in Dropbox, Airflow table structures |
 | Unified schema design                | Design target PostgreSQL schema consolidating all legacy sources into one database     |
-| Infrastructure provisioning          | K8s cluster, CI/CD pipelines, staging/prod environments on EU cloud (Hetzner/OVH)      |
+| Infrastructure provisioning          | K8s cluster, CI/CD pipelines, staging/prod environments on EU cloud (OVH)              |
 | Dev environment setup                | Docker-compose local dev, seed data, onboarding docs                                   |
 | STRIDE threat modeling               | First-pass threat register against architecture; mitigations mapped to backlog         |
 | LLM provider evaluation              | Test documents against candidate models (Mistral, Dragon LLM, EU alternatives)         |
@@ -126,7 +126,7 @@
 
 | Sub-Component                  | Backend (PD) | Frontend (PD) | Notes                                                                    |
 | ------------------------------ | :----------: | :-----------: | ------------------------------------------------------------------------ |
-| Document ingestion (upload)    |      5       |       4       | PDF, HTML, DOCX upload; file validation, virus scanning, metadata        |
+| Document ingestion (upload)    |      5       |       4       | PDF upload; file validation, virus scanning, metadata                    |
 | AI-powered document conversion |      8       |       0       | PDF → structured HTML via document AI (Mistral / Dragon LLM)             |
 | Structured data extraction     |      6       |       0       | Extract fields from converted documents into CBA data model              |
 | HTML cleanup & formatting      |      4       |       0       | Headings, lists, tables — clean well-structured output                   |
@@ -315,7 +315,7 @@
 | CI/CD security gates (SAST, dependency scan) |      5       |       0       | Bandit, pip-audit, gitleaks — block merge on critical/high findings       |
 | Container image scanning                     |      3       |       0       | Trivy on build; block push on critical vulnerabilities                    |
 | DAST (dynamic scanning)                      |      3       |       0       | OWASP ZAP on staging; advisory findings triaged within sprint             |
-| Encryption setup (at-rest, in-transit, mTLS) |      4       |       0       | TLS 1.2+, AES-256, pod-to-pod mTLS, pgcrypto for sensitive fields         |
+| Encryption setup (at-rest, in-transit, mTLS) |      4       |       0       | TLS 1.3, AES-256, pod-to-pod mTLS, pgcrypto for sensitive fields         |
 | Incident response playbooks                  |      2       |       0       | Documented runbooks for compromised keys, data leaks, unauthorized access |
 | Backup & restore validation                  |      2       |       0       | Encrypted backups, quarterly restore drills, RTO/RPO validation           |
 | **Subtotal**                                 |    **19**    |     **0**     |                                                                           |
@@ -352,7 +352,7 @@
 
 2. **Technical**
    - Single PostgreSQL instance is sufficient for unified schema (no sharding needed at current scale)
-   - EU cloud infrastructure (Hetzner/OVHcloud) is provisioned and accessible before development starts
+   - EU cloud infrastructure (OVHcloud) is provisioned and accessible before development starts
    - LLM provider decision (Mistral, Dragon LLM, or alternative) is finalized during Discovery
    - Elasticsearch cluster available for search features
    - GitLab or GitHub repository access granted to Altysys team

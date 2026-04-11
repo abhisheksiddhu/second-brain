@@ -42,11 +42,11 @@ graph TB
         RBAC["RBAC<br/>6 roles · Country-scoped"]
         AUDIT["Audit Logging<br/>Append-only · Tamper detection"]
         LANG["Multi-language Framework<br/>70-language service layer"]
-        ADMIN_P["Admin Panel<br/>Django + React"]
+        ADMIN_P["Admin Panel<br/>FastAPI + React"]
     end
 
     subgraph Infra["Infrastructure — Module 0 + Cross-cutting"]
-        K8S["Kubernetes Cluster<br/>EU Cloud (Hetzner/OVH)"]
+        K8S["Kubernetes Cluster<br/>EU Cloud (OVH)"]
         CICD["CI/CD Pipelines"]
         M13["M13: Monitoring & Observability<br/>Prometheus · Grafana · Alerting"]
         M14["M14: Security Hardening<br/>SAST · DAST · Container scanning<br/>Encryption · mTLS · Incident response"]
@@ -88,7 +88,7 @@ graph TB
 
 | Layer                  | Modules                                                    | Role                                                                                                                                                                                                                    |
 | ---------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Infrastructure**     | M0 (Discovery), M13 (Monitoring), M14 (Security)           | K8s on EU cloud, CI/CD with security gates, Prometheus/Grafana observability, encryption (TLS 1.2+, AES-256, mTLS)                                                                                                      |
+| **Infrastructure**     | M0 (Discovery), M13 (Monitoring), M14 (Security)           | K8s on EU cloud, CI/CD with security gates, Prometheus/Grafana observability, encryption (TLS 1.3, AES-256, mTLS)                                                                                                      |
 | **Core Platform**      | M1                                                         | Single PostgreSQL database unifying 25+ years of legacy data. RBAC with 6 roles, country-scoped access for 180+ countries, append-only audit logging, 70-language framework. Every module depends on this.              |
 | **Data Domains**       | M2 (Labour Law), M3 (Int'l Law), M4 (CBA), M6 (Pensions)   | Four distinct content databases — each with structured data entry, versioning, and a Draft → Review → Published workflow. M2/M3 share patterns. M4 adds AI-powered document conversion. M6 uses the survey engine.      |
 | **AI/ML**              | M5 (Annotation Pipeline), M12 (LLM Query)                  | M5: LLM-powered field extraction from legal documents with confidence scoring and human-in-the-loop review. M12: Public-facing natural language query API with strict topic boundaries and prompt injection guardrails. |
@@ -128,11 +128,11 @@ M7 (Data Migration) is the integration seam — it depends on domain schemas fro
 | --------------------- | ------------------------------------------------------------------------- |
 | **Database**          | PostgreSQL (single unified instance)                                      |
 | **Search**            | Elasticsearch (full-text, multilingual, faceted)                          |
-| **Backend**           | Django (Python)                                                           |
+| **Backend**           | FastAPI (Python)                                                          |
 | **Frontend**          | React (admin panel, form engine, annotation UIs)                          |
 | **LLM Providers**     | Mistral / Dragon LLM (EU-compliant; finalized in Discovery)               |
 | **Vector Store**      | TBD — for document embeddings in AI pipeline                              |
-| **Infrastructure**    | Kubernetes on EU cloud (Hetzner / OVHcloud)                               |
+| **Infrastructure**    | Kubernetes on EU cloud (OVHcloud)                                         |
 | **Observability**     | Prometheus + Grafana                                                      |
-| **Security Scanning** | Bandit, pip-audit, gitleaks (SAST), Trivy (containers), OWASP ZAP (DAST)  |
-| **Encryption**        | TLS 1.2+, AES-256 at rest, mTLS pod-to-pod, pgcrypto for sensitive fields |
+| **Security Scanning** | SAST, dependency scanning, secret scanning, container scanning, DAST      |
+| **Encryption**        | TLS 1.3, AES-256 at rest, mTLS pod-to-pod, pgcrypto for sensitive fields  |

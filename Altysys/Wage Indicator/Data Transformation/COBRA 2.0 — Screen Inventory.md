@@ -227,7 +227,7 @@
 
 **29. CBA Document Upload**
 
-- Drag-and-drop upload zone (PDF, DOCX)
+- Drag-and-drop upload zone (PDF)
 - Upload progress indicator
 - File list (for multi-file upload)
 - Metadata form on upload: country, expected language, industry, parties (if known)
@@ -252,7 +252,7 @@
 
 **32. CBA Document Review — Side-by-Side (HITL)**
 
-- Left pane: Original document viewer (PDF render / DOCX preview)
+- Left pane: Original document viewer (PDF render)
 - Right pane: AI-converted structured HTML
 - Inline HTML editor (rich text editing of converted output)
 - Section-level accept/reject controls

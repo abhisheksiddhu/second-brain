@@ -59,7 +59,7 @@ Data access, SMEs, coding frames, infra provisioning, sample data, script access
 (Section header)
 
 ## Slide 15–18 — Architecture & Tech Stack
-API-first, cloud agnostic, audit-first. Stack includes Django, React, Postgres, Airflow, Docker/K8s, Elasticsearch, Prometheus, DragonFly, Metabase.
+API-first, cloud agnostic, audit-first. Stack includes FastAPI, React, Postgres, Airflow, Docker/K8s, Elasticsearch, Prometheus, in-memory cache, Metabase.
 
 ## Slide 19–20 — COBRA Engine Evolution
 Tables comparing legacy vs V1 vs V2.
